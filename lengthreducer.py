@@ -8,7 +8,7 @@ questin_length = 0
 count = 0
 
 for line in sys.stdin:
-	data_mapped = line.split('\t')
+	data_mapped = line.strip().split('\t')
 	if len(data_mapped) != 2:
 		continue
 
@@ -35,4 +35,3 @@ if last_id:
 	print "{0}\t{1}\t{2}".format(last_id, questin_length, mean_answer_length)
 
 
-	
